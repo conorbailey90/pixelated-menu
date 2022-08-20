@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+    list-style: none;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+h1{
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.hero ul li{
+    color: rgb(163, 163, 163)
+}
+
+p{
+    color: white;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 5vw;
+    z-index: 100;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    pointer-events: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    transition: 1s;
+    opacity: 0;
+}
+
+
+.menu ul{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    transition: .5s;
+}
+
+.toggle{
+    cursor: pointer;
+    z-index: 100;
+    color: white;
+}
+
+main{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.pixel_wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    /* flex-wrap: wrap;
+    justify-content: flex-start; */
+    pointer-events: none;
+    z-index: 10;
+    transition: 2s;
+}
+
+.pixel_column{
+    display: flex;
+    flex-direction: column;
+}
+
+.pixel{
+    transition: .5s;
+}
+
+.active{
+    background: #000000;
+}
+
+.square{
+    position: absolute;
+    bottom: 100px;
+    right: 5vw;
+    width: 15vw;
+    height: 15vw;
+    background-color: white;
+    animation: flash 3s infinite ease-in-out;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 100px 5vw;
+
+}
+.intro{
+    margin-top: 2rem;
+    width: 30vw;
+}
+
+@media screen and (max-width: 800px){
+    .intro{
+        width: 80vw;
+    }
+}
+
+@keyframes flash {
+    0%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: .2;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
